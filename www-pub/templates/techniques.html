@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Jonas Malmlöf</title>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="/static/style/main.css" rel="stylesheet">
+		<link href="/static/style/techniques.css" rel="stylesheet"> 
+	</head>
+	<body>
+		<header id="main-header">
+			<a href="/"><div id="logo">
+				Jonas Malmlöf
+			</div></a>
+			<div id="page-info">
+				<span id="page-title">Techniques</span>
+				<span id="page-desc">browse projects by technique</span>
+			</div>
+		</header>
+		<nav id="main-nav">
+			<div id="left-wrap">
+				<a href="/">Home</a>
+				<a href="/list">List</a>
+				<a href="/techniques">Techniques</a>
+			</div>
+		</nav>
+		<main>
+			{% for tech in tech_stat_dict %}
+				<a href="#{{ tech }}">
+				<div class="item" id="{{ tech }}">
+					<!-- Image terms: "The copyright holder of this work allows anyone to use it for any purpose..." -->
+					<div class="cont"><div class="pn">{{ tech }}</div><img src="/static/images/down.png" placeholder="expand"></div>
+					<div class="sub">
+						{% for project in tech_stat_dict[tech] %}
+						<a href="/project/{{ project.id }}">
+						<div class="item">
+							<div class="cont"><div class="pn">{{ project.name }}</div> {{ project.short_description }}</div>
+						</div>
+						</a>
+						{% endfor %}
+					</div>
+				</div>
+				</a>
+			{% endfor %}
+		</main>
+
+		<script>
+			var pns = document.getElementsByClassName('pn');
+			document.addEventListener('click', function(e) {
+				if (e.target.className !== 'pn' && e.target.className !== 'cont')
+					location.hash = '';
+				else {
+					if (e.target.className === 'pn') {
+						if (e.target.parentNode.parentNode.parentNode.offsetHeight > 105) {
+							location.hash = '';
+							e.preventDefault();
+						}
+					}
+					else {
+						if (e.target.parentNode.parentNode.offsetHeight > 105) {
+							location.hash = '';
+							e.preventDefault();
+						}		
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

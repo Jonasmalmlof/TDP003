@@ -1,0 +1,137 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	overflow-x: hidden; /* ??? */
+	overflow-y: scroll;
+	font-family: monospace;
+	font-size: 1.2em;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	opacity: 0.5;
+}
+
+#main-header {
+	position: relative;
+	width: 100%;
+	height: 25%;
+	background-color: #b0b0c0;
+	/box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; /* ??? */
+	color: rgba(0,0,0,0.5);
+	text-transform: uppercase;
+}
+
+	#logo {
+		position: absolute;
+		top: -50px;
+		left: -60px;
+		height: 120px;
+		line-height: 150px;
+		width: 300px;
+		padding: 15px;
+		padding-right: 50px;
+		padding-left: 50px;
+		background-color: #474844;
+		/box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; /* ??? */
+		opacity: 0.75;
+		font-size: 1.3em;
+		color: #ddddff;
+		transform: rotate(-25deg);
+	}
+
+	#page-info {
+		position: absolute;
+		bottom: 15px;
+		left: 20%;
+	}
+
+		#page-title {
+			display: inline-block;
+			position: relative;
+			z-index: 2;
+			font-size: 2.7em;
+			font-weight: bold;
+
+		}
+
+		#page-desc {
+			display: inline-block;
+			position: relative;
+			z-index: 2;
+			font-weight: bold;
+			opacity: 0.5;
+		}
+
+#main-nav {
+	position: relative;
+	width: 100%;
+	height: 55px;
+	line-height: 55px;
+	background-color: #f1f1f9;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	color: rgba(0,0,0,0.5);
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+	#left-wrap {
+		position: absolute;
+		left: 20%;
+	}
+
+		#left-wrap * {
+			display: inline-block;
+		}
+		
+		#left-wrap :not(:last-child) {
+			margin-right: 15px;
+		}
+
+	#right-wrap {
+		position: absolute;
+		right: 20%;
+	}
+
+		#right-wrap :not(:first-child) {
+			margin-left: 15px;
+		}
+
+		#right-wrap * {
+			display: inline-block;
+		}
+
+		/* list.css */
+		#search-btn.active {
+			opacity: 0.5;
+		}
+
+main {
+	margin: auto;
+	padding-top: 5px;
+	width: 60%;
+}
+main p a {
+	color: #4b7d74;
+}
+
+#main-img {
+	float: right;
+	margin-top: 30px;
+}

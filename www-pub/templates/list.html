@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Jonas Malmlöf</title>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="/static/style/main.css" rel="stylesheet">
+		<link href="/static/style/list.css" rel="stylesheet">
+	</head>
+	<body>
+		<header id="main-header">
+			<a href="/"><div id="logo">
+				Jonas Malmlöf
+			</div></a>
+			<div id="page-info">
+				<span id="page-title">List</span>
+				<span id="page-desc">browse projects</span>
+			</div>
+		</header>
+		<nav id="main-nav">
+			<div id="left-wrap">
+				<a href="/">Home</a>
+				<a href="/list">List</a>
+				<a href="/techniques">Techniques</a>
+			</div>
+			<div id="right-wrap">		
+				<a id="search-btn" href="javascript:srcToggle()">Search</a>
+			</div>
+		</nav>
+		<main>
+			<div id="search-wrap">
+				<form method="GET">
+						<div class="split">
+						<label>Search in</label><br>
+							<input name="search_fields" value="project_name" type="checkbox"> Name
+							<input name="search_fields" value="course_id" type="checkbox"> Course
+							<input name="search_fields" value="long_description" type="checkbox"> Description
+						</div>
+						<div class="split">
+						<label>Require techniques</label><br>
+						{% for tech in technique_lst %}
+							{{ tech }} <input type="checkbox" value="{{ tech }}" name="techniques">
+						{% endfor %}
+						</div>
+						<br><br><br><br>
+
+						<input id="search" class="form-elem" name="search" type="textbox" placeholder="Query">
+						<label class="abc">Sort by</label>
+						<select name="sort_by" class="form-elem">
+							<option value="start_date"> Start date
+							<option value="end_date"> End date
+							<option value="project_name"> Project name
+						</select>
+						<select name="sort_order" class="form-elem">
+							<option value="asc">Ascending
+							<option value="desc">Descending
+						</select>
+						<br><br>
+						<button id="submit" class="form-elem" type="submit">Search</button>
+					</form>
+			</div>
+			{% for project in project_lst %}
+        		<a href="/project/{{ project.project_id }}">
+				<div class="item">
+					<div class="cont"><div class="pn">{{ project.project_name }}</div> {{ project.short_description }} <img src="/static/images/{{ project.small_image }}" alt="project-image"></div>
+				</div>
+				</a>
+    		{% endfor %}
+		</main>
+
+		<script>
+			var srcBtn = document.getElementById('search-btn')
+			var srcWrap = document.getElementById('search-wrap')
+			var src = document.getElementById('search');
+			function srcToggle() {
+				srcBtn.className = srcBtn.className ? '' : 'active';
+				srcWrap.className = srcWrap.className ? '' : 'active';
+				if (srcWrap.className)
+					src.focus();
+				else
+					src.blur();
+			}
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+main {
+	padding-top: 15px;
+}
+
+.item {
+	font-size: 0.95em;
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 19px;
+	background-color: #f7f7f7;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+	.pn {
+		font-weight: bold;
+		font-size: 1.3em;
+		margin-bottom: 5px;
+	}
+
+	.item .sub {
+		display: none;
+	}
+	.item:target {
+		color: rgba(0,0,0,0.5);
+	}
+		.item:target > a  {
+			opacity: 1;
+		}
+
+		.item:target .sub {
+			margin-top: 15px;
+			margin-bottom: -15px;
+			display: block;
+			color: rgba(0,0,0,1);
+		}
+
+			.item:target .sub .item {
+				box-shadow: none;
+				border-left: 4px solid #ccc;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+
+	.item img {
+		float: right;
+		height: 30px;
+		margin-top: -30px;
+	}

@@ -1,0 +1,76 @@
+[
+  {
+     "start_date": "2016-08-14",
+     "short_description": "TDP002 Imperativ programmering: Terminal based sokoban",
+     "course_name": "TDP002",
+     "long_description": "A terminal based sokoban game written in Python 3. The goal of sokoban is to push crates in a warehouse onto designated storage locations.",
+     "group_size": 2,
+     "academic_credits": 0,
+     "lulz_had": "69",
+     "external_link": "",
+     "techniques_used": [
+       "Python"
+     ],
+     "project_name": "Sokoban",
+     "course_id": "TDP002",
+     "end_date": "2016-09-26",
+     "project_id": 1,
+     "small_image": "TDP002.png",
+     "big_image": "TDP002.png",
+     "collaborators": [
+     	"Jonas Malmlöf",
+		"Albin Vedin"
+     ]
+  },
+  {
+	"start_date": "2016-08-29",
+	"short_description": "TDP003 Projekt: Egna Datormiljön",
+	"course_name": "TDP003",
+	"long_description": "A portfolio containing all my projects, consisting av a presentation layer and a data layer. The presentation layer is implemented with Flask and fetches data from the data layer written in Python 3, which is then displayed using Jinja2 templates",
+	"group_size": 2,
+	"academic_credits": 6,
+	"lulz_had": "79",
+	"external_link": "https://gitlab.ida.liu.se/jonma993/tdp003-portfolio",
+	"techniques_used": [
+		"Python",
+		"Jinja2",
+		"Flask",
+		"HTML",
+		"CSS",
+		"Javascript"
+	],
+	"project_name": "Portfolio",
+	"course_id": "TDP003",
+	"end_date": "2016-10-27",
+	"project_id": 2,
+	"small_image": "TDP003.png",
+	"big_image": "TDP003.png",
+	"collaborators": [
+     	"Jonas Malmlöf",
+     	"Love Bäckman"
+     ]
+  },
+  {
+     "start_date": "2016-11-02",
+     "short_description": "TDP005 Projekt: Objektorienterat System",
+     "course_name": "TDP005",
+     "long_description": "A game written in C++, using objectoriented programming. You control Douglas, your character with the keyboard and attack enemies by walking into them. Killing enemies yields experiencepoints that eventually make you go up in level and deal more damage and gain more health. ",
+     "group_size": 2,
+     "academic_credits": 6,
+     "lulz_had": "17",
+     "external_link": "",
+     "techniques_used": [
+       "C++", "CLion", "CMake", "LaTeX" 
+     ],
+     "project_name": "Douglas the Dungeoneer",
+     "course_id": "TDP005",
+     "end_date": "2016-12-19",
+     "project_id": 3,
+     "small_image": "TDP005.png",
+     "big_image": "TDP005.png",
+     "collaborators": [
+     	"Jonas Malmlöf",
+		"Mikael Sjödin"
+     ]
+  }
+]

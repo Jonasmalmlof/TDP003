@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jonas Malmlöf</title>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="/static/style/main.css" rel="stylesheet">
+	</head>
+	<body>
+		<header id="main-header">
+			<a href="/">
+				<div id="logo">
+				Jonas Malmlöf
+				</div>
+			</a>
+
+			<div id="page-info">
+				<span id="page-title">Home</span>
+				<span id="page-desc">A project portfolio</span>
+			</div>
+		</header>
+		<nav id="main-nav">
+			<div id="left-wrap">
+				<a href="/">Home</a>
+				<a href="/list">List</a>
+				<a href="/techniques">Techniques</a>
+			</div>
+		</nav>
+		<main>
+			<img id="main-img" src="/static/images/indexfoto.jpg" alt="project-image" width=275>
+			<h1>About me</h1>
+			<p>Name: Jonas Malmlöf
+			<p>Email: jonma993@student.liu.se
+			<p>Likes: Stuff
+
+			<h1>Latest project</h1>
+			<p>Project: <a href="/project/{{ latest_project.project_id }}">{{ latest_project.project_name }}</a>
+			<p>Course: {{ latest_project.course_id }}
+			<p>Techniques: {% for tech in latest_project.techniques_used %} {{ tech }}{% if not loop.last %},{% endif %} {% endfor %}
+			<p>Source: <a href="{{ latest_project.external_link }}">{{ latest_project.external_link }}</a>
+
+			<h1>Licenses</h1>
+			<p><a target="_blank" href="https://commons.wikimedia.org/wiki/File:Image_manquante_2.svg">https://commons.wikimedia.org/wiki/File:Image_manquante_2.svg</a> by <a target="_blank" href="https://commons.wikimedia.org/wiki/User:GwenofGwened">GwenofGwened</a>, <a target="_blank" href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC-BY-SA</a>
+			<p><a target="_blank" href="https://www.iconfinder.com/icons/186411/arrow_down_icon#size=128">https://www.iconfinder.com/icons/186411/arrow_down_icon#size=128</a> by Designerz Base, <a href="http://support.iconfinder.com/694-legal/2527-license-overview">Free for commercial use</a>
+		</main>
+	</body>
+</html>
